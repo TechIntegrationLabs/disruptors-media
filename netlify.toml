@@ -1,14 +1,18 @@
 [build]
-  # Since this appears to be a pre-built static site, skip build command  
-  command = "echo 'Using pre-built files'"
+  # Build command for React app
+  command = "npm run build"
   
-  # Directory to publish (React build output is in public/build)
-  publish = "public/build"
+  # Directory to publish (React build output)
+  publish = "build"
+  
+  # Base directory where the React app is located
+  base = "public"
 
   # Environment variables for build
   [build.environment]
     NODE_VERSION = "18"
     NPM_VERSION = "9"
+    REACT_APP_BASE_URL = "https://admin.disruptorsmedia.com"
 
 # Headers for better security and caching
 [[headers]]
